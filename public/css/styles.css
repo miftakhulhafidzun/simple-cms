@@ -1,0 +1,291 @@
+/* Navbar styles */
+.navbar {
+    background-color: rgba(128, 208, 199, 1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e5e5;
+    transition: background-color 0.3s ease;
+}
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar-toggler-icon {
+    color: #000000; /* Set the color of the toggle icon */
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-right: 15px; /* Add space between nav items */
+}
+
+.nav-link {
+    color: #000000; /* Set the color of the nav links */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Add a smooth transition for color changes */
+}
+
+.nav-link:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 10px; /* Add space between nav items in collapsed mode */
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        margin-right: 15px; /* Add space between toggle button and nav items in collapsed mode */
+    }
+
+    .navbar-toggler-icon {
+        font-size: 1.5rem; /* Adjust the size of the toggle icon in collapsed mode */
+    }
+
+    .d-lg-none {
+        margin-right: 0; /* Remove margin in non-lg mode */
+    }
+
+    .d-none.d-lg-block {
+        display: none; /* Hide the desktop-only element in collapsed mode */
+    }
+}
+
+/* Navbar styles for about.php */
+.navbar-about {
+    background-color: rgba(128, 208, 199, 1);
+    padding: 15px 0; /* Add padding to the top and bottom */
+    border-bottom: none; /* Remove the bottom border */
+}
+
+/* Styles for the site header */
+.site-header {
+    background-color: #80d0c7;
+    padding: 50px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: none; /* Remove any border */
+}
+
+/* Breadcrumb item styles */
+.breadcrumb-item {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Breadcrumb link styles */
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #0088cc;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #006699;
+}
+
+/* Active breadcrumb item styles */
+.breadcrumb-item.active {
+    color: #333333;
+}
+
+/* Heading styles */
+h2.text-white {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Hero section styles */
+.hero-section {
+    background:  linear-gradient(to right, #13547a, #80d0c7), url('your-background-image.jpg'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    color: #000000; /* Set text color */
+    padding: 100px 0; /* Adjust top and bottom padding */
+}
+
+.hero-section h1 {
+    font-size: 3rem; /* Set the font size for the heading */
+    font-weight: bold;
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.hero-section h6 {
+    font-size: 1.2rem; /* Set the font size for the subheading */
+    margin-bottom: 30px; /* Add space below the subheading */
+}
+
+.custom-form {
+    max-width: 400px; /* Set the maximum width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    border-radius: 30px; /* Set border-radius for the form */
+    overflow: hidden; /* Hide overflow to create oval shape */
+}
+
+.input-group {
+    border-radius: 30px; /* Set border-radius for the input group */
+    overflow: hidden; /* Hide overflow to create oval shape */
+}
+
+.input-group-text {
+    background-color: #007bff; /* Set the background color for the search icon */
+    color: #ffffff; /* Set the color for the search icon */
+    border: none; /* Remove border from the search icon */
+    border-radius: 30px 0 0 30px; /* Set border-radius for the left part of the input group */
+}
+
+.form-control {
+    border-radius: 30px; /* Set border-radius for the button */
+    background-color: #007bff; /* Set the background color for the button */
+    color: #ffffff; /* Set the text color for the button */
+    border: none; /* Remove border from the button */
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    display: flex;
+    align-items: center;
+}
+
+.form-control input {
+    background-color: #ffffff; /* Set the background color for the input field */
+    color: #000000; /* Set the text color for the input field */
+    border: none; /* Remove border from the input field */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 30px; /* Set border-radius for the input field */
+    flex: 1; /* Allow the input field to expand and fill the available space */
+}
+
+.form-control:before {
+    content: "\1F50D"; /* Unicode for magnifying glass icon */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set the font family for the icon */
+    font-size: 20px; /* Set the font size for the icon */
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+.form-control {
+    background-color: #80d0c7; /* Set the background color for the button */
+    color: #ffffff; /* Set the text color for the button */
+    border: none; /* Remove border from the button */
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    border-radius: 30px; /* Set border-radius for the button */
+    display: flex;
+    align-items: center;
+}
+
+.form-control:hover {
+    background-color: #007bff; /* Change the background color on hover */
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0; /* Adjust top and bottom padding for smaller screens */
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-section h6 {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Style for the "Kegiatan Terkini" heading */
+.container {
+    gap: 10px 20px; /* Add the desired gap between rows (10px) and columns (20px) */
+}
+.explore-section h2 {
+    color: #000000; /* Set the heading text color */
+    margin-bottom: 20px; /* Add margin-bottom to create space below the heading */
+}
+
+.custom-form {
+    margin-top: 20px; /* Add margin-top to create space above the form */
+}
+
+/* Style for the custom block */
+
+.custom-block {
+    padding: 20px; /* Add padding to the custom block */
+    border-radius: 10px; /* Add border-radius to create rounded corners */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Hover effect for the custom block */
+.custom-block:hover {
+    transform: translateY(-5px); /* Move the block 5px up on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+}
+
+/* Style for the title within the custom block */
+.custom-block h4 {
+    color: #333333; /* Set the title text color */
+}
+
+/* Style for the description within the custom block */
+.custom-block p {
+    color: #666666; /* Set the description text color */
+}
+
+/* Style for the "More Information" button */
+.custom-block .btn-primary {
+    background-color: #007bff; /* Set the button background color */
+    color: #ffffff; /* Set the button text color */
+    border: none; /* Remove the button border */
+    padding: 10px 20px; /* Add padding to the button */
+    border-radius: 5px; /* Add border-radius to create rounded corners */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    display: inline-block; /* Align the button horizontally */
+}
+
+/* Hover effect for the button */
+.custom-block .btn-primary:hover {
+    background-color: #0056b3; /* Change the button background color on hover */
+}
+
+/* Style for the kegiatan photo */
+.custom-block .kegiatan-photo img {
+    width: 100%; /* Set the image width to 100% of its container */
+    border-radius: 8px; /* Add border-radius to create rounded corners for the image */
+    margin-bottom: 10px; /* Add margin-bottom to create space below the image */
+}
+
