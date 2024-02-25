@@ -16,6 +16,10 @@
                 <textarea class="form-control" id="inputDescription" name="description" placeholder="Enter Description"></textarea>
             </div>
             <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="text" class="form-control" id="date" name="date" autocomplete="off">
+            </div>
+            <div class="mb-3">
                 <label for="inputPhoto" class="form-label">Photo</label>
                 <input type="file" class="form-control" id="inputPhoto" name="photo">
             </div>
@@ -23,4 +27,5 @@
             <a href="{{ route('home') }}" type="button" class="btn btn-secondary text-white">Kembali</a>
         </form>
     </main>
+    
 @endsection

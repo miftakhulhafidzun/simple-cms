@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 use App\Models\Kegiatan;
 
 class KegiatanController extends Controller
@@ -57,11 +58,13 @@ class KegiatanController extends Controller
             $photo->move(public_path('image'), $photoName);
         }
 
+        $date = Carbon::createFromFormat('d/m/Y', $request->date)->format('Y-m-d H:i:s');
+
         // Menyimpan data kegiatan ke dalam database menggunakan Query Builder
         $data = [
             'title' => $request->title,
             'description' => $request->description,
-            'date' => now(),
+            'date' => $date,
             'photo' => $photoName, // null jika tidak ada foto yang diunggah
             'created_at' => now(), // Waktu pembuatan akan diatur otomatis
             'updated_at' => now(), // Waktu pembaruan akan diatur otomatis
@@ -124,15 +127,19 @@ class KegiatanController extends Controller
             $photo->move(public_path('image'), $photoName);
         }
 
+        // Memformat tanggal jika ada dalam input
+        $date = Carbon::createFromFormat('d/m/Y', $request->date)->format('Y-m-d H:i:s');
+
         // Memperbarui data kegiatan dalam database menggunakan Query Builder
         DB::table('kegiatans')
         ->where('id', $id)
-            ->update([
-                'title' => $request->title,
-                'description' => $request->description,
-                'photo' => $photoName, // Update nama foto jika diunggah
-                'updated_at' => now(), // Waktu pembaruan akan diatur otomatis
-            ]);
+        ->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'date' => $date, // Update tanggal dengan format yang benar
+            'photo' => $photoName, // Update nama foto jika diunggah
+            'updated_at' => now(), // Waktu pembaruan akan diatur otomatis
+        ]);
 
         // Redirect ke halaman yang sesuai
         return redirect()->route('home')->with('success', 'Kegiatan berhasil diperbarui.');

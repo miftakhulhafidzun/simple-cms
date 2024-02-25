@@ -31,6 +31,7 @@
         <link href="{{ asset("css/dashboard.css") }}" rel="stylesheet">
         <link href="{{ asset("css/bootstrap-icons.css") }}" rel="stylesheet">
         <link href="{{ asset("css/all.min.css") }}" rel="stylesheet">
+        <link href="{{ asset("css/jquery-ui.min.css") }}" rel="stylesheet">
 
         <link rel="icon" href="{{ asset("image/bpsdmp_logo.png") }}" sizes="32x32" type="image/png">
 
@@ -51,6 +52,19 @@
         <script src="{{ asset("assets/dist/js/bootstrap.bundle.min.js") }}"></script>
         <script src="{{ asset("js/dashboard.js") }}"></script>
         <script src="{{ asset("js/all.min.js") }}"></script>
+        <script src="{{ asset("js/jquery.min.js") }}"></script>
+        <script src="{{ asset("js/jquery-ui.min.js") }}"></script>
+
+    <script>
+        $( function() {
+            $( "#date" ).datepicker({
+                dateFormat: 'dd/mm/yy', // Format tanggal dd/mm/yyyy
+                changeMonth: true, // Aktifkan navigasi ke bulan lain
+                changeYear: true // Aktifkan navigasi ke tahun lain
+            });
+        });
+    </script>
 
     </body>
+
 </html>
